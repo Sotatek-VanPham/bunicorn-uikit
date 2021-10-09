@@ -7,7 +7,7 @@ import Text from "../../components/Text/Text";
 import { MenuEntry } from "./components/MenuEntry";
 import Menu from "./Menu";
 import { LangType } from "./types";
-import { links, linkMyPage } from "./config";
+import { links, linkMyPage, balance } from "./config";
 
 export default {
   title: "Widgets/Menu",
@@ -32,6 +32,7 @@ const useProps = () => {
     links,
     linkMyPage,
     profile: null,
+    balance
   });
 
   useEffect(() => {
@@ -49,6 +50,7 @@ const useProps = () => {
         links,
         linkMyPage,
         profile: null,
+        balance
       });
     }, 2000);
     return () => {
@@ -101,6 +103,7 @@ export const NotConnected: React.FC = () => {
         currentLang="EN"
         links={links}
         linkMyPage={linkMyPage}
+        balance={balance}
       >
         <div>
           <h1>Page body</h1>
@@ -134,6 +137,7 @@ export const WithNoProfile: React.FC = () => {
         cakePriceUsd={0.23158668932877668}
         links={links}
         linkMyPage={linkMyPage}
+        balance={balance}
         profile={{
           profileLink: "/profile",
           noProfileLink: "/no-profile",
@@ -176,6 +180,7 @@ export const WithProfile: React.FC = () => {
         currentLang="EN"
         cakePriceUsd={0.23158668932877668}
         links={links}
+        balance={balance}
         linkMyPage={linkMyPage}
         profile={{
           username: "pancakeswap",
@@ -231,6 +236,7 @@ export const WithSubmenuSelected: React.FC = () => {
         currentLang="EN"
         cakePriceUsd={0.23158668932877668}
         links={links}
+        balance={balance}
         linkMyPage={linkMyPage}
         profile={{
           username: "pancakeswap",

@@ -39,3 +39,8 @@ export declare const MENU_HEIGHT_MOBILE = 65;
 export declare const MENU_ENTRY_HEIGHT = 48;
 export declare const SIDEBAR_WIDTH_FULL = 240;
 export declare const SIDEBAR_WIDTH_REDUCED = 0;
+export declare const balance: {
+    total: number;
+    bur0: number;
+    bur1: number;
+};

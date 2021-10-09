@@ -58,4 +58,5 @@ export interface NavProps extends PanelProps {
   profile?: Profile;
   logout: () => void;
   linkMyPage: Array<MenuEntry>;
+  balance?: object
 }

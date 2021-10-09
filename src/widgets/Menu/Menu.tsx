@@ -13,6 +13,7 @@ import { NavProps } from "./types";
 import Avatar from "./components/Avatar";
 import { MENU_HEIGHT, MENU_HEIGHT_MOBILE, SIDEBAR_WIDTH_FULL } from "./config";
 import MyPage from './components/MyPage'
+import Balance from "./components/Balance";
 
 const Wrapper = styled.div`
   position: relative;
@@ -53,8 +54,8 @@ const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   max-width: 100%;
 
   ${({ theme }) => theme.mediaQueries.nav} {
-    margin-left: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_FULL}px`};
-    max-width: ${({ isPushed }) => `calc(100% - ${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_FULL}px)`};
+    // margin-left: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_FULL}px`};
+    max-width: 100%;
   }
 `;
 
@@ -88,6 +89,7 @@ const Menu: React.FC<NavProps> = ({
   linkMyPage,
   profile,
   children,
+  balance,
 }) => {
   const { isXl } = useMatchBreakpoints();
   const isMobile = isXl === false;
@@ -137,7 +139,8 @@ const Menu: React.FC<NavProps> = ({
           href={homeLink?.href ?? "/"}
         />
         <Flex alignItems="center">
-          <MyPage linkMyPage={linkMyPage}/>
+          {/* <MyPage linkMyPage={linkMyPage}/> */}
+          <Balance balance={balance}/>
           <StyleThemeSwitcherHeader>
             <ThemeSwitcherHeader isDark={isDark} toggleTheme={toggleTheme} />
           </StyleThemeSwitcherHeader>
@@ -147,7 +150,7 @@ const Menu: React.FC<NavProps> = ({
         </Flex>
       </StyledNav>
       <BodyWrapper>
-        <Panel
+        {/* <Panel
           isPushed={isPushed}
           isMobile={isMobile}
           showMenu={showMenu}
@@ -160,11 +163,11 @@ const Menu: React.FC<NavProps> = ({
           pushNav={setIsPushed}
           links={links}
           href={homeLink?.href ?? "/"}
-        />
+        /> */}
         <Inner isPushed={isPushed} showMenu={showMenu}>
           {children}
         </Inner>
-        <MobileOnlyOverlay show={isPushed} onClick={() => setIsPushed(false)} role="presentation" />
+        {/* <MobileOnlyOverlay show={isPushed} onClick={() => setIsPushed(false)} role="presentation" /> */}
       </BodyWrapper>
     </Wrapper>
   );

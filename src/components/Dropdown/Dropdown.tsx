@@ -31,6 +31,7 @@ const DropdownContent = styled.div<{ position: Position }>`
   overflow-y: auto;
   z-index: ${({ theme }) => theme.zIndices.dropdown};
   border-radius: 10px;
+  margin-top: 8px;
 `;
 
 const Container = styled.div`
