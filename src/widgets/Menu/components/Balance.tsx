@@ -25,6 +25,7 @@ const Block = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 8px;
   .balance {
     cursor: pointer;
     display: flex;
@@ -57,11 +58,22 @@ const Add = styled.div`
 
 const Balance: React.FC<Props> = ({ balance }) => (
   <Block>
-    <Dropdown position="bottom" target={<Add><a href="https://bunicorn.exchange/#/trade/tokens" target="_blank">+</a></Add>}>
-    <div className="detail">BUY BUR</div>
-
+    <Dropdown
+      position="bottom"
+      target={
+        <Add>
+          <a
+            href="https://bunicorn.exchange/#/trade/tokens?assetIn=bnb&assetOut=0xc1619D98847CF93d857DFEd4e4d70CF4f984Bd56"
+            target="_blank"
+          >
+            +
+          </a>
+        </Add>
+      }
+    >
+      <div className="detail">BUY BUR</div>
     </Dropdown>
-    
+
     <Dropdown
       position="bottom"
       target={
@@ -96,7 +108,7 @@ const Balance: React.FC<Props> = ({ balance }) => (
     >
       <div className="detail">
         <div>{balance.bur0} BUR</div>
-        <div> + WIDTHDRAWABLE {balance.bur1}</div>
+        <div> + In-Game {balance.bur1}</div>
       </div>
     </Dropdown>
   </Block>

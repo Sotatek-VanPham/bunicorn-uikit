@@ -52,7 +52,7 @@ const StyleFlex = styled(Flex)`
     margin-left: -8px;
   }
   .btn-toggle-menu {
-    display: block;
+    display: none;
     ${({ theme }) => theme.mediaQueries.nav} {
       display: none;
     }
@@ -73,13 +73,13 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, href, isDark }) => {
 
   return (
     <StyleFlex>
-      <MenuButton className="btn-toggle-menu" aria-label="Toggle menu" onClick={togglePush} mr="24px">
+      {/* <MenuButton className="btn-toggle-menu" aria-label="Toggle menu" onClick={togglePush} mr="24px">
         {isPushed ? (
           <HamburgerCloseIcon width="24px" color="#5F5E76" />
         ) : (
           <HamburgerIcon width="24px" color="#0085FF" />
         )}
-      </MenuButton>
+      </MenuButton> */}
       {isAbsoluteUrl ? (
         <StyledLink as="a" href={href} >
           {innerLogo}

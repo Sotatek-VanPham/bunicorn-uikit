@@ -144,7 +144,7 @@ const Menu: React.FC<NavProps> = ({
           <StyleThemeSwitcherHeader>
             <ThemeSwitcherHeader isDark={isDark} toggleTheme={toggleTheme} />
           </StyleThemeSwitcherHeader>
-          <LangSelectorHeader isDark={isDark} currentLang={currentLang} langs={langs} setLang={setLang} />
+          {/* <LangSelectorHeader isDark={isDark} currentLang={currentLang} langs={langs} setLang={setLang} /> */}
           <UserBlock account={account} login={login} logout={logout} />
           <StyleThemeSwitcherHeader style={{ display: 'none'}}>{profile && <Avatar profile={profile} />}</StyleThemeSwitcherHeader>
         </Flex>

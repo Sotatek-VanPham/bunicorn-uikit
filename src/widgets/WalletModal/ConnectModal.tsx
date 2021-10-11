@@ -52,13 +52,13 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => (
           mb={index < config.length - 1 ? "8px" : "0"}
         />
       ))}
-      <HelpLink
+      {/* <HelpLink
         href="https://smart-dex29.gitbook.io/smartdex-v2/general-faq#how-do-i-connect-my-wallet-to-smartdex"
         external
       >
         Learn how to connect
         <HelpIcon color="#0085FF" ml="12px" />
-      </HelpLink>
+      </HelpLink> */}
     </StyleContent>
   </Modal>
 );
